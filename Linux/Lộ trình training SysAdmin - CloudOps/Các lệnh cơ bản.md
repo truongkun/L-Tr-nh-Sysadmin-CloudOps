@@ -115,3 +115,59 @@ Tuy nhiên, bạn chỉ nên sử dụng tín hiệu `KILL (-9)` khi cần thi�
 | kill     | Gửi tín hiệu TERM (terminate) đến tiến trình|- Tiến trình được yêu cầu kết thúc bình thường và có thể thực hiện các công việc dọn dẹp trước khi kết thúc.<br>- Tiến trình có thể bắt tín hiệu này và thực hiện các hành động cần thiết trước khi kết thúc.| 
 | kill -9 hoặc kill -SIGKILL   | Gửi tín hiệu KILL đến tiến trình          | - Tiến trình bị chấm dứt ngay lập tức mà không có cơ hội thực hiện bất kỳ công việc dọn dẹp nào.<br>- Không có tùy chọn cho tiến trình để "ngắt" hay "từ chối" tín hiệu KILL này.        | 
 
+- `apt-get`: công cuj quản lý gói phầm mềm
+
+- `dpkg --get-selections`: Check list phần mềm đã cài đặt
+
+- `dpkg -l | grep <tên-phần-mềm>`: check 1 phần mềm đã được cài đặt
+
+- `apt-update`: là việc cập nhật danh sách các gói phần mềm từ các nguồn cài đặt trên hệ thống của bạn
+
+- `apt-upgrade`: Thực hiện việc cài đặt các gói phần mềm mới nhất từ các kho lưu trữ đã được cập nhật bởi lệnh `apt update`
+
+  **Khi nào dùng apt update:**
+
+  - Khi bạn muốn cập nhật thông tin về các gói phần mềm từ các kho lưu trữ.
+
+  - Trước khi chạy apt upgrade, để đảm bảo rằng bạn đang cập nhật từ các nguồn dữ liệu mới nhất.
+
+  **Khi nào dùng apt upgrade:**
+
+  - Khi bạn muốn cài đặt phiên bản mới nhất của các gói phần mềm đã được cập nhật.
+
+  - Thường được chạy sau khi apt update để cập nhật các gói phần mềm trên hệ thống của bạn.
+
+- `ls`: hiển thị danh sách thư mục đang đứng
+- `cp`: Copy file or thư mục , đổi tên thư mục
+- `mv`: di chuyển file ỏr thư mục, đổi tên thư mục
+- `rm`: xóa thư mục rỗng
+- `touch`: tạo file
+- `ln`: tạo các liên kết (links) giữa các tệp tin hoặc thư mục.
+
+  - Liên kết cứng (hard link):
+  Liên kết cứng tạo ra một liên kết giữa tên file và inode, làm cho file trở nên có nhiều tên. Khi bạn xóa một tên file, dữ liệu vẫn tồn tại trên đĩa nếu có ít nhất một liên kết khác đến inode đó
+    ```
+    CP: ln source_file hard_link
+    ```
+    **Ví dụ:**
+    Giả sử chúng ta có một file file1.txt, và chúng ta muốn tạo một liên kết cứng tên là hard_link.txt đến file này:
+    ```
+    ln file1.txt hard_link.txt
+    ```
+  - Liên kết mềm (symbolic link):
+  Liên kết mềm tạo ra một liên kết tới tên file, không phải inode. Khi file gốc bị xóa, liên kết mềm sẽ trở thành "broken" và không thể truy cập nữa.
+    ```
+    CP: ln -s source_file symbolic_link
+    ```
+    **Ví dụ:**
+    Giả sử chúng ta muốn tạo một liên kết mềm có tên là soft_link.txt đến file file1.txt:
+    ```
+    ln -s file1.txt soft_link.txt
+    ```
+
+    **Lưu ý:**
+    - Liên kết cứng chỉ hoạt động trong phạm vi cùng một filesystem.
+    - Liên kết mềm có thể trỏ đến file ở một filesystem khác.
+    - Dấu -s là tùy chọn dùng để chỉ định rằng chúng ta muốn tạo một liên kết mềm.
+    - Đường dẫn có thể là tuyệt đối hoặc tương đối đối với vị trí hiện tại.
+    - Sau khi thực hiện lệnh ln, bạn sẽ thấy liên kết đã được tạo trong thư mục hiện taị

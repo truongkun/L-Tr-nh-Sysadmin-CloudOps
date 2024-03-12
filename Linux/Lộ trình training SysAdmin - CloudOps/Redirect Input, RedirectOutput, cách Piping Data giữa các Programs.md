@@ -2,7 +2,7 @@
 
 ## Redirect Input là gì
 
-- "Redirect Input" là một kỹ thuật cho phép bạn chuyển hướng dữ liệu từ một nguồn khác vào đầu vào của một chương trình hoặc một lệnh.
+- `Redirect Input` là một kỹ thuật cho phép bạn chuyển hướng dữ liệu từ một nguồn khác vào đầu vào của một chương trình hoặc một lệnh.
 - Cho phép bạn cung cấp dữ liệu từ một tệp tin hoặc từ một lệnh khác, thay vì nhập dữ liệu trực tiếp từ bàn phím.
 
 **Ví dụ, để chạy một chương trình và cung cấp dữ liệu từ một tệp tin, bạn có thể sử dụng Redirect Input như sau:**
@@ -12,12 +12,12 @@
 Trong đó:
 
 - command là tên của chương trình hoặc lệnh mà bạn muốn chạy.
-- < là ký hiệu cho Redirect Input.
-- input_file là tệp tin chứa dữ liệu bạn muốn chuyển hướng vào chương trình.
+- `<` là ký hiệu cho `Redirect Input`.
+- `input_file` là tệp tin chứa dữ liệu bạn muốn chuyển hướng vào chương trình.
 
 ## Redirect Output là gì
 
-- Redirect Output" (chuyển hướng đầu ra) là một kỹ thuật cho phép bạn điều hướng đầu ra của một lệnh hoặc chương trình sang một vị trí cụ thể, thay vì hiển thị trực tiếp trên màn hình.
+- `Redirect Output` (chuyển hướng đầu ra) là một kỹ thuật cho phép bạn điều hướng đầu ra của một lệnh hoặc chương trình sang một vị trí cụ thể, thay vì hiển thị trực tiếp trên màn hình.
 - Kỹ thuật này rất hữu ích khi bạn muốn **lưu trữ kết quả của một lệnh vào một tập tin** hoặc **sử dụng kết quả đó làm đầu vào cho một lệnh khác**.
 
 **Có một số cách để redirect output trong Linux:**
