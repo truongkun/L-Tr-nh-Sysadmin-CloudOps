@@ -1,3 +1,5 @@
+# Tìm hiểu chowm
+
 Cả hai lệnh `chown` và `chgrp` được sử dụng để thay đổi quyền sở hữu của tệp tin hoặc thư mục trong hệ thống Linux. Dưới đây là mô tả và ví dụ minh họa cho mỗi lệnh:
 
 ## 1. `chown`:
