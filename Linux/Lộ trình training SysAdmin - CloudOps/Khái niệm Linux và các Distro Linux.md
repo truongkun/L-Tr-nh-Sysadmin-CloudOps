@@ -22,42 +22,42 @@ Thay vào đó, có một cây dữ liệu và các ổ đĩa được bung vào
 
 - **Ưu điểm của hệ điều hành Linux**
 
-  - *Bản quyền và chi phí hợp lý:*
+  - **Bản quyền và chi phí hợp lý:**
     - Với bản chất là một mã nguồn mở, Linux được phát triển “free” cho người sử dụng. Người dùng có thể nhìn thấy hầu như mọi dòng code trong Linux. Trong khi đó, Windows bản quyền và bộ Office bản quyền sẽ phải mất khoảng vài triệu để sở hữu tương tự.
 
     - Sử dụng Linux, bạn sẽ được sử dụng miễn phí tất cả các tính năng kèm bộ ứng dụng cho người dùng văn phòng miễn phí. Học tập, xem phim, nghe nhạc, chat…, mọi hoạt động bạn không phải lo lắng gì về vấn đề bản quyền nữa.
 
-- *Hỗ trợ tốt cho lập trình viên – quản trị mạng*
+- **Hỗ trợ tốt cho lập trình viên – quản trị mạng***
   - Hệ thống Linux hoạt động ổn định, hiệu năng cao. Do đó, Linux hỗ trợ tốt cho nhiều công việc, đặc biệt là đối với những công việc đòi hỏi tính ổn định hệ thống cao như quản trị mạng, lập trình viên.
 
-- *Sự hỗ trợ kỹ thuật tích cực*
+- **Sự hỗ trợ kỹ thuật tích cực**
   - Linux cung cấp dịch vụ hỗ trợ kỹ thuật 24/7 trong cả năm đối với mọi dịch vụ. Có thể kể đến như Red Hat, Novell và Canonical .
 
-- *Linh hoạt*
+- **Linh hoạt**
   - Nếu hiểu sâu về Linux, bạn hoàn toàn có thể dễ dàng chỉnh sửa theo ý mình. Linux đúng là một môi trường lý tưởng cho các lập trình viên cũng như các nhà phát triển vì Linux mang lại sự tương thích với rất nhiều môi trường khác nhau.
 
-- *Giao diện phong phú*
+- **Giao diện phong phú**
   - Với Linux, giao diện hoàn toàn tách rời với hệ thống lõi. Do đó, bạn có thể đổi môi trường giao diện mà không cần lo lắng xem có phải cài lại chương trình hay không. Bạn có thể tha hồ chọn giao diện như GNOME, KDE hay gần đây hơn là Unity.
 
-- *Độ an toàn với khả năng bảo mật, hạn chế sự tấn công của các mã độc và virus cao*
+- **Độ an toàn với khả năng bảo mật, hạn chế sự tấn công của các mã độc và virus cao**
   - Nếu như trên Windows, những con virus, mã độc, … luôn là thứ khiến bạn phải chật vật đối mặt thì Linux sẽ mang lại cho bạn cảm giác an toàn. Điều tuyệt vời là tất cả bọn chúng đều không thể hoạt động được trên nền tảng này. Công việc của bạn chỉ là xóa khi thấy bọn chúng trong USB hay ổ cứng di động (ổ cứng SSD).
 
-- *Hoạt động tốt ngay cả trên những máy tính có cấu hình yếu*
+- **Hoạt động tốt ngay cả trên những máy tính có cấu hình yếu**
   - Thông thường, một phiên bản mới được nâng cấp sẽ kèm theo yêu cầu phần cứng cũng phải được nâng lên theo. Vậy trong trường hợp cấu hình máy tính của bạn không đủ đáp ứng yêu cầu của phiên bản mới thì sao?
 
   - Linux sẽ giúp bạn tránh khỏi những lo lắng đó. Với sự nâng cấp, hỗ trợ thường xuyên từ cộng đồng lập trình, Linux tự tin hoạt động mượt mà và cực kỳ ổn định ngay cả trên các máy tính có cấu hình thấp.
 
 - **Hạn chế**: Bên cạnh những ưu điểm ở trên, Linux vẫn còn một số điểm hạn chế:
 
-  - *Số lượng ứng dụng hỗ trợ trên Linux chưa phong phú, còn khá ít sự lựa chọn cho người dùng*
+  - **Số lượng ứng dụng hỗ trợ trên Linux chưa phong phú, còn khá ít sự lựa chọn cho người dùng**
+  
+    - Một số nhà sản xuất không phát triển driver hỗ trợ nền tảng Linux.*
 
-  - *Một số nhà sản xuất không phát triển driver hỗ trợ nền tảng Linux.*
+    - Bạn sẽ mất một khoảng thời gian để “thích nghi” nếu chuyển từ Windows sang Linux vì thực sự khá khó để làm quen với Linux.
 
-  - *Bạn sẽ mất một khoảng thời gian để “thích nghi” nếu chuyển từ Windows sang Linux vì thực sự khá khó để làm quen với Linux.*
+    - Tuỳ vào tính chất, nhu cầu sử dụng mà bạn cần tìm một hệ điều hành thích hợp với mình.
 
-  - *Tuỳ vào tính chất, nhu cầu sử dụng mà bạn cần tìm một hệ điều hành thích hợp với mình.*
-
-  - *Tuỳ vào tính chất, nhu cầu sử dụng mà bạn nên chọn một phương thức thích hợp với mình.*
+    - Tuỳ vào tính chất, nhu cầu sử dụng mà bạn nên chọn một phương thức thích hợp với mình.`
 
 # II. Distro Linux
 
@@ -79,29 +79,29 @@ Thông thường, các bản phân phối **Linux** tùy chọn bao gồm một 
 
 Còn khác nhau thì chủ yếu dựa vào 2 yếu tố chính: thị trường distro Linux là gì và triết lý phần mềm của chúng. 
 
-***2.3.1. Xét về thị trường:***
+**2.3.1. Xét về thị trường:**
 
 Các distro Linux phổ biến và phát triển hiện nay được chia thành 4 nhóm:
 
-- *Nhóm 1: Arch, Gentoo và Slackware*
+- **Nhóm 1: Arch, Gentoo và Slackware**
 
 Các các bản distrolinux này nhắm vào người dùng am hiểu Linux. Do đó, phần lớn các phương thức xây dựng, cũng như cấu hình của hệ thống được thực hiện qua dòng lệnh.
 
-- *Nhóm 2: Debian, Fedora*
+- **Nhóm 2: Debian, Fedora**
 
 Đối tượng người dùng của nhóm 2 là người am hiểu về hệ thống nhưng chưa thực sự hiểu về Linux. Vì vậy, distro sẽ cung cấp cho họ nhiều công cụ hơn. Nhóm này phù hợp với người dùng mới bắt đầu sử dụng Linux. 
 
 Tuy nhiên, các distro của nhóm 2 lại có quy trình phát triển và kiểm tra chất lượng phần mềm khắt khe hơn các nhóm còn lại. Do đó, để trở thành lập trình viên chính thức của nhóm này, bạn buộc phải có thời gian đóng góp dài. Đồng thời, được chứng nhận chất lượng bởi những lập trình viên khác. Vì thế, giới công nghệ luôn đánh giá cao môi trường của nhóm Debian, Fedora.
 
-- *Nhóm 3: Centos, RHEL, SUSE EL*
+- **Nhóm 3: Centos, RHEL, SUSE EL**
 
 Các bản distrolinux nhắm vào thị trường máy chủ, doanh nghiệp, cơ quan… Vì chúng có sự ổn định cao, thời gian ra phiên bản mới lâu, khoảng 3 – 5 năm tùy distrolinux. Ngoài ra, còn có dịch vụ hỗ trợ thương mại cho công ty, hướng dẫn sử dụng sản phẩm.
 
-- *Nhóm 4: Ubuntu, Open SUSE, Linux Mint*
+- **Nhóm 4: Ubuntu, Open SUSE, Linux Mint**
 
 Đối tượng khách hàng của nhóm 4 là người mới bắt đầu dùng Linux và người dùng cuối. Đặc tính của chúng là phát triển trong thời gian ngắn, ứng dụng các công nghệ mới liên tục, nhiều công cụ đồ họa để thiết kế và cấu hình hệ thống theo nhu cầu sử dụng. Nhóm này cũng rất thân thiện với người dùng mới làm quen Linux.
 
-***2.3.2. Xét về triết lý phần mềm (Distro Philosophy)***
+**2.3.2. Xét về triết lý phần mềm (Distro Philosophy)**
 
 Triết lý phần mềm là những nguyên tắc, hay định hướng, mục tiêu của người phát triển chúng đặt ra. Vì thế, khi xét về yếu tố này thì distro cũng được phân thành 4 nhóm.
 
@@ -121,7 +121,7 @@ Giấy phép Công cộng GNU (tiếng Anh: GNU General Public License, viết t
 
 Phần mềm GPL phải là phần mềm tự do.
 
-*Tức là người sử dụng có 4 quyền sau với phần mềm GPL:*
+**Tức là người sử dụng có 4 quyền sau với phần mềm GPL:**
 
 - Tự do chạy chương trình, cho bất cứ mục đích nào.
 

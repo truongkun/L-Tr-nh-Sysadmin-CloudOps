@@ -22,7 +22,7 @@ ____
 
 ### <a name="what-is">1.1 DNS là gì?</a>
 
-- DNS viết tắt của Domain Name System có nghĩa là hệ thống phân giải tên miền. DNS là hệ thống cho phép thiết lập tương ứng giữa địa chỉ IP và tên miền trên Internet.
+- `DNS` viết tắt của `Domain Name System` có nghĩa là hệ thống phân giải tên miền. DNS là hệ thống cho phép thiết lập tương ứng giữa địa chỉ IP và tên miền trên Internet.
 
     ![dns-root.png](img/dns-la-gi.jpg)
 

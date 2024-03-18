@@ -43,3 +43,57 @@ Phân vùng là một phần quan trọng của cách tổ chức và quản lý
 Trên một máy chủ, `partition` là cách chia ổ đĩa vật lý thành các phần riêng biệt, trong khi `file system` là cách dữ liệu được tổ chức và quản lý trên từng phân vùng. 
 
 Mỗi phân vùng phải có một hệ thống tệp cụ thể để có thể sử dụng được, và hệ thống tệp này sẽ quyết định cách dữ liệu được tổ chức và truy cập trên phân vùng tương ứng.
+
+VD: Chia ổ cứng bằng fdisk
+
+1. **Chia phân vùng**:
+   - Sử dụng `fdisk` hoặc `parted` để chia phân vùng. Ví dụ, sử dụng `fdisk`:
+     ```
+     sudo fdisk /dev/sda
+     ```
+
+   - Tạo 3 phân vùng:
+     - Phân vùng 1: 10GB, loại Linux (83)
+     - Phân vùng 2: 20GB, loại Linux (83)
+     - Phân vùng 3: 30GB, loại Linux (83)
+
+2. **Định dạng các phân vùng**:
+   - Định dạng phân vùng đầu tiên (10GB) với ext4:
+     ```
+     sudo mkfs.ext4 /dev/sda1
+     ```
+   - Định dạng phân vùng thứ hai (20GB) với xfs:
+     ```
+     sudo mkfs.xfs /dev/sda2
+     ```
+   - Định dạng phân vùng thứ ba (30GB) với ext3:
+     ```
+     sudo mkfs.ext3 /dev/sda3
+     ```
+
+3. **Tạo các thư mục gắn kết**:
+   ```
+   sudo mkdir /data1
+   sudo mkdir /data2
+   sudo mkdir /data3
+   ```
+
+4. **Cấu hình file `/etc/fstab`**:
+   - Mở file `/etc/fstab` với trình soạn thảo văn bản:
+     ```
+     sudo nano /etc/fstab
+     ```
+   - Thêm các dòng sau vào cuối file:
+     ```
+     /dev/sda1   /data1   ext4   defaults   0   0
+     /dev/sda2   /data2   xfs    defaults   0   0
+     /dev/sda3   /data3   ext3   defaults   0   0
+     ```
+
+5. **Gắn kết các phân vùng**:
+   - Gắn kết tất cả các phân vùng:
+     ```
+     sudo mount -a
+     ```
+
+Sau khi hoàn thành các bước trên, bạn sẽ có 3 phân vùng được gắn kết với `/data1`, `/data2`, và `/data3`, mỗi phân vùng có dung lượng tương ứng và định dạng file hệ thống tập tin mong muốn.

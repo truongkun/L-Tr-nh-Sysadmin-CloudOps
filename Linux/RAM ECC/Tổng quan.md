@@ -78,3 +78,20 @@ Cơ chế hoạt động của RAM Registered ECC có cả ưu và nhược đi�
 ![alt text](img/image1.png)
 
 ![alt text](img/image2.png)
+
+## SDDC - Single Device Data Correction 
+
+- `SDDC`, viết tắt của "Single Device Data Correction", là một kỹ thuật `sửa lỗi dữ liệu trên một thiết bị đơn lẻ trong hệ thống lưu trữ hoặc bộ nhớ`. Khi dữ liệu bị hỏng do lỗi phần cứng trên một thiết bị, `SDDC` cho phép thiết bị đó `tự động phát hiện và sửa chữa lỗi` mà không cần can thiệp từ hệ thống hoặc người dùng.
+
+- `SDDC` hoạt động bằng cách sử dụng các mã sửa lỗi được tính toán trước (ví dụ như mã sửa lỗi Hamming) để phát hiện và sửa chữa lỗi dữ liệu. `Khi một lỗi được phát hiện, SDDC sẽ sử dụng thông tin từ các bit dự phòng để khôi phục lại dữ liệu gốc mà không cần phải yêu cầu dữ liệu từ nguồn bên ngoài.` Điều này giúp `tăng cường độ tin cậy và tính khả dụng của hệ thống lưu trữ hoặc bộ nhớ.`
+
+- `Chipkill` được thiết kế để `đảm bảo độ ổn định` cho hệ thống thống. Chipkill còn được gọi với những cái tên khác như `Advanced ECC`, viết tắt cho các tính năng trong module bộ nhớ ECCC và SDDC (Single Device Data Correction / Intel).
+
+  - Đây là những Module bộ nhớ ECC đặc biệt với công nghệ được sử dụng sửa lỗi bổ sung lên đến 4 bit và 8 bit phát hiện lỗi.
+
+- Các hệ thống Sun Microsystems gọi tính năng này là Extended ECC, HP gọi là Chipspare và Intel gọi là SDDC.
+
+- Cơ chế hoạt động của Advanced:
+  - `Advanced ECC` có thể `sửa lỗi đa bit trong một chip DRAM`. Vì vậy, nó hoàn toàn có thể sửa lỗi của DRAM Chip.
+
+  - Trong Advanced ECC với 4-bit bộ nhớ, mỗi chip đóng góp 4-bit dữ liệu. 4-bit từ mỗi chip được phân phối cho 4 thiết bị ECC (1 bit trên 1 thiết bị ECC). Vì vậy, một lỗi trong một chip có thể tạo ra 4 lỗi đơn bit riêng rẽ.
