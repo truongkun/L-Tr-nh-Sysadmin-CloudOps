@@ -3,16 +3,16 @@
 Trong hệ điều hành Linux, cấu trúc file system thường tuân thủ một số quy ước chung nhằm tổ chức và quản lý các tệp tin và thư mục. Dưới đây là một số thư mục quan trọng trong cấu trúc file system của Linux:
 
 1. **/** (Root Directory):
-   - Là thư mục gốc của hệ thống file Linux. Tất cả các thư mục và tệp tin khác đều được chứa trong thư mục này.
+   - Là `thư mục gốc` của hệ thống file Linux. Tất cả các thư mục và tệp tin khác đều được chứa trong thư mục này.
 
 2. **/bin** (Binaries):
-   - Chứa các lệnh cơ bản và các chương trình thực thi cần thiết cho việc quản lý và vận hành hệ thống.
+   - Chứa các lệnh cơ bản và các `chương trình thực thi` cần thiết cho việc quản lý và vận hành hệ thống.
 
 3. **/boot**:
-   - Chứa các file khởi động của hệ thống, bao gồm các kernel và các file cấu hình boot loader như GRUB.
+   - Chứa các file khởi động của hệ thống, bao gồm các `kernel` và các file cấu hình boot loader như GRUB.
 
 4. **/etc** (Etcetera):
-   - Chứa các tập tin cấu hình cho các chương trình và dịch vụ trong hệ thống.
+   - Chứa các `tập tin cấu hình` cho các chương trình và dịch vụ trong hệ thống.
 
 5. **/home**:
    - Là nơi lưu trữ các thư mục cá nhân cho các người dùng.
