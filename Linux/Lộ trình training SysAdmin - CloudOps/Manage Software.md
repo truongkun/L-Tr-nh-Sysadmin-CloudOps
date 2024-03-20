@@ -18,6 +18,9 @@ Gói phần mềm giúp việc cài đặt, cập nhật và gỡ bỏ phần m�
 
 `dependencies` (phụ thuộc) là các thành phần, thư viện, hoặc gói phần mềm mà một ứng dụng hoặc dự án cần để hoạt động đúng cách.
 
+
+> Bản chất của gói phụ thuộc (dependency) là mối quan hệ giữa các thành phần trong một hệ thống phần mềm, trong đó một thành phần cần sử dụng các chức năng hoặc tài nguyên của thành phần khác để hoạt động đúng đắn.
+
 **Các dependencies có thể bao gồm:**
 
 1. `Thư viện và module`: Các phần mềm thường cần sử dụng các thư viện hoặc module để thực hiện các chức năng cụ thể. 
@@ -60,6 +63,8 @@ Quản lý `dependencies` là một phần quan trọng của quá trình phát 
 - `Binary package (gói nhị phân)` là một dạng đóng gói của phần mềm đã được biên dịch thành mã máy `(binary code)` thay vì mã nguồn `(source code)`. Điều này có nghĩa là phần mềm đã được chuyển đổi thành dạng mà máy tính có thể `hiểu và thực thi trực tiếp mà không cần phải biên dịch thêm`.
 
 - `Binary packages` thường được sử dụng để `cài đặt phần mềm` một cách dễ dàng và nhanh chóng trên hệ thống Linux. Thay vì tải mã nguồn và biên dịch phần mềm từ đầu, người dùng có thể sử dụng `binary packages` để cài đặt trực tiếp từ kho lưu trữ `(repository)` của hệ thống.
+
+> Bản chất của gói nhị phân (binary package) là một tập hợp các tệp tin chứa mã máy (binary code) đã được biên dịch từ mã nguồn của một phần mềm. Gói nhị phân thường bao gồm các tệp tin thực thi, thư viện, tài nguyên và các tệp tin cấu hình cần thiết cho phần mềm hoạt động.
 
 ### 3.2. Cách sử dụng binary packages
 
