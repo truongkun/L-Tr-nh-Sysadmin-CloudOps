@@ -2,6 +2,11 @@
 
 Trong hệ thống Linux, các tệp `log` thường được lưu trữ trong thư mục `/var/log`. Dưới đây là mô tả về các file log thường gặp trong hệ thống Linux:
 
+
+## Khái niệm
+
+Log file là một `tập tin ghi lại các sự kiện, hoạt động hoặc thông tin quan trọng xảy ra trong hệ thống hoặc ứng dụng.`
+
 ### Các file log chính của hệ thống:
 
 1. **/var/log/messages**:
