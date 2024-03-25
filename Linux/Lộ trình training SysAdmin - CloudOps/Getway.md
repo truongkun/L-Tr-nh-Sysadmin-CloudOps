@@ -49,6 +49,11 @@ Tóm lại, `switch` là một thành phần chính trong các mạng LAN hiện
   - Subnet Mask 255.255.255.0 tương ứng với 24 bit được sử dụng cho phần mạng và 8 bit được sử dụng cho phần máy.
   - Subnet Mask 255.255.255.128 tương ứng với 25 bit cho phần mạng và 7 bit cho phần máy.
 
+
+## Dùng làm gì?
+
+subnetmask dùng để `phân biệt` đại chỉ ip phần nào là `network address` và phần nào là `Host address`, từ đó `hỗ trợ` trong việc `định cấu hình, định tuyến và bảo mật trong mạng máy tính.`
+
 ### Cách sử dụng Subnet Mask:
 
 1. **Xác định phạm vi của mạng con (subnet)**: Bằng cách kết hợp Subnet Mask với địa chỉ IP, bạn có thể xác định được phạm vi của mạng con. Cụ thể, các bit trong địa chỉ IP mà tương ứng với các bit 1 trong Subnet Mask sẽ xác định địa chỉ mạng con.
@@ -59,7 +64,7 @@ Tóm lại, `switch` là một thành phần chính trong các mạng LAN hiện
 
 ## Default GetWay là gì?
 
-- Default GetWay: là 1 thiết bị chuyển tiếp từ mạng này sang mạng khác 
+- `Default GetWay`: là 1 thiết bị `chuyển tiếp từ mạng này sang mạng khác` 
 -> Router
 
 - Default GetWay cho phép các thiết bị từ 1 mạng này giao tiếp được với các thiết bị trên mạng khác. và nó thường đc gọi là `Router`
