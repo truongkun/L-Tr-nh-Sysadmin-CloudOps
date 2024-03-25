@@ -57,3 +57,6 @@ Trong quá trình này, máy chủ DHCP chịu trách nhiệm quản lý và c�
 7. **Xử lý các gói tin cập nhật DHCP**: Máy chủ DHCP cũng có thể xử lý các gói tin cập nhật DHCP từ các thiết bị trong mạng, như yêu cầu gia hạn thời gian thuê địa chỉ IP.
 
 Nhờ vào cơ chế hoạt động này, máy chủ DHCP giúp tự động hóa quá trình cấp phát và quản lý địa chỉ IP trong mạng, giúp giảm thiểu công việc quản trị mạng và đảm bảo tính hiệu quả và linh hoạt trong việc sử dụng địa chỉ IP.
+
+Khi một client cắm dây mạng vào một mạng LAN và muốn lấy địa chỉ IP từ một máy chủ DHCP (Dynamic Host Configuration Protocol), nó sẽ sử dụng gói tin DHCP Discover để tìm máy chủ DHCP trong mạng. Gói tin này sẽ được broadca
+st ra toàn bộ mạng LAN, và bất kỳ máy chủ DHCP nào nghe được gói tin này sẽ phản hồi bằng gói tin DHCP Offer, cung cấp địa chỉ IP và các thông tin cấu hình khác cho client.
