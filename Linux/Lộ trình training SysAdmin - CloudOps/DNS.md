@@ -11,10 +11,15 @@ ____
     - [1.1 DNS là gì?](#11-dns-là-gì)
     - [1.2 Vai trò, chức năng của DNS](#12-vai-trò-chức-năng-của-dns)
     - [1.3 Cách thức hoạt động của DNS](#13-cách-thức-hoạt-động-của-dns)
-    - [1.4 Những máy chủ DNS tốt nhất thị trường hiện nay](#14-những-máy-chủ-dns-tốt-nhất-thị-trường-hiện-nay)
-    - [1.4 Kết luận](#14-kết-luận)
-    - [Các loại query DNS.](#các-loại-query-dns)
+    - [1.4 Các loại máy DNS ](#14-các-loại-máy-dns-)
+      - [1.4.1.Recursive DNS Server (DNS Máy chủ Đệ Quy):](#141recursive-dns-server-dns-máy-chủ-đệ-quy)
+      - [1.4.2. Authoritative DNS Server (DNS Máy chủ Chính Thức):](#142-authoritative-dns-server-dns-máy-chủ-chính-thức)
+      - [1.4.3. Caching DNS Server (DNS Máy chủ Lưu Trữ Tạm Thời):](#143-caching-dns-server-dns-máy-chủ-lưu-trữ-tạm-thời)
+    - [Các loại truy vấn DNS là gì?](#các-loại-truy-vấn-dns-là-gì)
+      - [3 loại truy vấn DNS:](#3-loại-truy-vấn-dns)
     - [1.5 cách tìm ip của domain dantri.vn bằng command trong linux ](#15-cách-tìm-ip-của-domain-dantrivn-bằng-command-trong-linux-)
+      - [Sử dụng lệnh `dig`:](#sử-dụng-lệnh-dig)
+      - [Sử dụng lệnh `nslookup`:](#sử-dụng-lệnh-nslookup)
 
 ____
 
@@ -58,78 +63,57 @@ Chính vì nhờ có giao thức DNS nên bạn không cần phải nhớ địa
 - Máy chủ DNS cấp cao nhất sẽ trả về địa chỉ IP của máy chủ DNS quản lý website. Máy chủ DNS quản lý sẽ trả về địa chỉ IP của trang web cho máy chủ DNS cục bộ.
 - Cuối cùng, máy chủ DNS cục bộ sẽ trả về địa chỉ IP của trang web cho máy tính của người dùng. Máy tính của người dùng sẽ sử dụng địa chỉ IP này để kết nối với website.
 
-### <a name="Các máy chủ DNS">1.4 Những máy chủ DNS tốt nhất thị trường hiện nay</a>
+### <a name="Các máy chủ DNS">1.4 Các loại máy DNS </a>
 
 - Việc chọn máy chủ DNS phù hợp và tốt nhất phụ thuộc vào nhiều yếu tố, bao gồm tốc độ, độ tin cậy và sự phù hợp với khu vực địa lý của người dùng. Dưới đây là một số gợi ý về những máy chủ DNS tốt nhất hiện nay:
 
-**Google Public DNS**
+#### 1.4.1.Recursive DNS Server (DNS Máy chủ Đệ Quy):
 
-- Được quản lý bởi Google, Google Public DNS được coi là một trong những máy chủ DNS nhanh và đáng tin cậy nhất. Với tốc độ phản hồi nhanh và khả năng bảo mật cao, Google Public DNS là lựa chọn phổ biến của người dùng trên toàn thế giới.
+- Đây là loại máy chủ DNS mà các máy tính và thiết bị trong mạng thông thường kết nối đến để thực hiện các truy vấn DNS.
+- DNS máy chủ đệ quy sẽ tìm kiếm thông tin DNS từ Internet và trả về cho người dùng hoặc thiết bị yêu cầu.
+- Ví dụ: Google DNS, OpenDNS.
 
-- Địa chỉ DNS của Google: 8.8.8.8 và 8.8.4.4
+#### 1.4.2. Authoritative DNS Server (DNS Máy chủ Chính Thức):
 
-**Cloudflare DNS**
+- Đây là loại máy chủ DNS chứa thông tin chính xác về một tên miền cụ thể, bao gồm các bản ghi DNS như A, AAAA, MX, CNAME, v.v.
+- Các máy chủ DNS chính thức cung cấp thông tin cho các truy vấn DNS liên quan đến tên miền mà chúng được cấu hình để quản lý.
+- Ví dụ: Máy chủ DNS của tên miền, như máy chủ DNS của Google cho tên miền google.com.
 
-- Với tốc độ phản hồi rất nhanh và sự bảo mật mạnh mẽ, Cloudflare DNS là một lựa chọn phù hợp cho người dùng cần sự đáng tin cậy và bảo mật cao. Điều đặc biệt của Cloudflare DNS là họ còn cung cấp các tính năng bảo vệ chống tấn công DDoS và giảm thiểu rủi ro từ phần mềm độc hại.
+#### 1.4.3. Caching DNS Server (DNS Máy chủ Lưu Trữ Tạm Thời):
 
-- Địa chỉ DNS của Cloudflare: 1.1.1.1 và 1.0.0.1
+- Đây là loại máy chủ DNS lưu trữ thông tin từ các truy vấn trước đó trong một kho dữ liệu tạm thời.
+- Khi một truy vấn DNS được thực hiện, máy chủ lưu trữ tạm thời có thể trả về kết quả từ bộ nhớ cache thay vì phải truy vấn lại từ Internet.
+- Điều này giúp cải thiện hiệu suất và giảm tải cho máy chủ DNS chính thức và Internet nói chung.
 
-![alt text](img/image-dns.png)
+Mỗi loại máy chủ DNS phục vụ một mục đích cụ thể và đóng vai trò quan trọng trong việc đảm bảo hoạt động hiệu quả và đáng tin cậy của cơ sở hạ tầng Internet.
 
-**OpenDNS**
-- Được cung cấp bởi Cisco. OpenDNS là một máy chủ DNS nhanh, đáng tin cậy. Đặc biệt, nó cung cấp nhiều tính năng bảo mật cho người dùng, bao gồm chặn trang web độc hại, chặn spam và bảo vệ đối với các trang web phổ biến nhưng có khả năng tấn công.
+### Các loại truy vấn DNS là gì?
 
-- Địa chỉ DNS của OpenDNS: 208.67.222.222 và 208.67.220.220
+Trong quá trình tra cứu DNS thông thường, có ba loại truy vấn xảy ra. Bằng cách sử dụng kết hợp các truy vấn này, quy trình được tối ưu hóa cho độ phân giải DNS có thể giúp giảm khoảng cách di chuyển. Trong tình huống lý tưởng, dữ liệu bản ghi được lưu trong bộ nhớ cache sẽ có sẵn, cho phép máy chủ tên DNS trả về truy vấn không đệ quy.
 
-**Quad9**
+#### 3 loại truy vấn DNS:
 
-- Quad9 là một máy chủ DNS miễn phí, nhanh và đáng tin cậy được quản lý bởi tập đoàn phi lợi nhuận về bảo mật mạng. Quad9 cung cấp tính năng bảo mật cao và chặn trang web độc hại, với một danh sách đen được cập nhật liên tục về các trang web độc hại và phishing.
+1. `Recursive query(Truy vấn đệ quy)` - Trong truy vấn đệ quy, máy khách DNS yêu cầu máy chủ DNS (thường là trình phân giải đệ quy DNS) sẽ phản hồi máy khách bằng bản ghi tài nguyên được yêu cầu hoặc thông báo lỗi nếu trình phân giải không thể tìm thấy bản ghi.
+2. `Iterative query(Truy vấn lặp lại)` - trong trường hợp này, máy khách DNS sẽ cho phép máy chủ DNS trả về câu trả lời tốt nhất có thể. Nếu máy chủ DNS được truy vấn không khớp với tên truy vấn, nó sẽ trả về một tham chiếu đến máy chủ DNS có thẩm quyền ở cấp độ thấp hơn của không gian tên miền. Sau đó, máy khách DNS sẽ thực hiện truy vấn đến địa chỉ được giới thiệu. Quá trình này tiếp tục với các máy chủ DNS bổ sung trong chuỗi truy vấn cho đến khi xảy ra lỗi hoặc hết thời gian chờ.
+3. `Non-recursive query(Truy vấn không đệ quy)` - thông thường, điều này sẽ xảy ra khi máy khách trình phân giải DNS truy vấn máy chủ DNS để tìm bản ghi mà nó có quyền truy cập vì nó có thẩm quyền đối với bản ghi hoặc bản ghi tồn tại bên trong bộ đệm của nó. Thông thường, máy chủ DNS sẽ lưu vào bộ đệm các bản ghi DNS để ngăn chặn việc tiêu thụ và tải thêm băng thông trên các máy chủ ngược dòng.
 
-- Địa chỉ DNS của Quad9: 9.9.9.9 và 149.112.112.112
-
-Ngoài ra, người dùng cũng có thể sử dụng các công cụ kiểm tra máy chủ DNS như DNSPerf hoặc DNS Benchmark để tìm kiếm và chọn lựa các máy chủ DNS phù hợp nhất cho nhu cầu của mình.
-
-![alt text](img/image-domain.png)
-
-### <a>1.4 Kết luận</a>
-  - `DNS Server` là một phần không thể thiếu trong Internet và các hệ thống mạng. Bằng cách hiểu rõ về máy chủ DNS, bạn có thể dễ dàng cấu hình và bảo trì máy chủ DNS của riêng mình một cách hiệu quả và an toàn. Hy vọng bài viết này đã giúp bạn có cái nhìn tổng quan và hiểu rõ hơn về DNS Server. Nếu còn những thắc mắc cần giải đáp hay cần bổ sung kiến thức về DNS hãy trở lại với SunCloud.vn để được giải đáp sớm nhất nhất nhé.
-
-### <a>Các loại query DNS.</a>
-
-- DNS (Domain Name System) là một hệ thống quản lý các tên miền và biến đổi chúng thành địa chỉ IP tương ứng. 
-
-**Dưới đây là một số loại truy vấn DNS phổ biến:**
-
-1. **Truy vấn A (Address Record)**: Truy vấn A được sử dụng để tìm kiếm địa chỉ IPv4 của một tên miền cụ thể.
-
-2. **Truy vấn AAAA (IPv6 Address Record)**: Tương tự như truy vấn A, nhưng sử dụng để tìm kiếm địa chỉ IPv6 của một tên miền.
-
-3. **Truy vấn CNAME (Canonical Name Record)**: Truy vấn này được sử dụng để tạo một bản ghi tên miền phụ (alias) cho một tên miền chính.
-
-4. **Truy vấn MX (Mail Exchange Record)**: Sử dụng để tìm kiếm máy chủ thư điện tử (mail server) cho một tên miền nhất định.
-
-5. **Truy vấn NS (Name Server Record)**: Truy vấn NS được sử dụng để tìm kiếm thông tin về máy chủ tên miền (name server) cho một tên miền cụ thể.
-
-6. **Truy vấn PTR (Pointer Record)**: Truy vấn này được sử dụng để tìm kiếm tên miền chính (domain name) cho một địa chỉ IP cụ thể.
-
-7. **Truy vấn SOA (Start of Authority Record)**: Truy vấn SOA cung cấp thông tin về máy chủ tên miền gốc (root domain) cho một tên miền nhất định.
-
-8. **Truy vấn TXT (Text Record)**: Truy vấn này cho phép lưu trữ các dữ liệu văn bản tùy chỉnh trong bản ghi DNS của một tên miền.
-
-Các loại truy vấn DNS này được sử dụng để đáp ứng các yêu cầu khác nhau từ các máy khách trên Internet, giúp hệ thống DNS chuyển đổi giữa các tên miền và địa chỉ IP một cách hiệu quả.
 
 ### <a>1.5 cách tìm ip của domain dantri.vn bằng command trong linux </a>
 
 -Bạn có thể sử dụng lệnh `dig` hoặc `nslookup` để tìm địa chỉ IP của tên miền "dantri.vn" trong Linux. Dưới đây là cách thực hiện bằng cả hai lệnh:
 
-    ###Sử dụng lệnh `dig`:###
-    ```bash
-    dig +short dantri.vn
-    ```
+#### Sử dụng lệnh `dig`:
 
-    ### Sử dụng lệnh `nslookup`:##
-    ```bash
-    nslookup dantri.vn
-    ```
+```
+dig +short dantri.vn
+```
+
+#### Sử dụng lệnh `nslookup`:
+
+```
+nslookup dantri.vn
+```
 
 Kết quả sẽ hiển thị một hoặc nhiều địa chỉ IP liên quan đến tên miền "dantri.vn". Địa chỉ IP được liệt kê thường là các máy chủ web hoặc máy chủ DNS của tên miền đó.
+
+
